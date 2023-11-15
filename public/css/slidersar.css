@@ -1,0 +1,124 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 6, 2020, 11:07:28 AM
+    Author     : ebaak
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 6, 2020, 11:07:28 AM
+    Author     : ebaak
+*/
+
+.slider1,.slider2,.slider3,.slider4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slider1{
+/*    background-image: url('../images/03bdd98d-92ae-4d16-8332-9a2bba2bf8f5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;*/
+    animation:fade1 12s infinite;
+}
+.slider2{
+/*    background-image: url('../images/47086675-1194-4e1d-a8ef-374f50b5f12b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;*/
+    animation:fade2 12s infinite;
+}
+.slider3{
+/*    background-image: url('../images/28c6bbd5-c2ab-4ddd-baba-eb6530526e9a.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;*/
+    animation:fade3 12s infinite;
+}
+.slider4{
+/*    background-image: url('../images/42651f9e-e3ed-451b-88cf-ebf274d7a32f.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;*/
+    animation:fade4 12s infinite;
+}
+@keyframes fade1{
+    0%{
+        opacity:1;
+    }
+     25%{
+        opacity:0;
+    }
+     50%{
+        opacity:0;
+    }
+     75%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+    
+}
+@keyframes fade2{
+    0%{
+        opacity:0;
+    }
+     25%{
+        opacity:1;
+    }
+     50%{
+        opacity:0;
+    }
+     75%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+    
+}
+@keyframes fade3{
+    0%{
+        opacity:0;
+    }
+     25%{
+        opacity:0;
+    }
+     50%{
+        opacity:1;
+    }
+     75%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+    
+}
+@keyframes fade4{
+    0%{
+        opacity:0;
+    }
+     25%{
+        opacity:0;
+    }
+     50%{
+        opacity:0;
+    }
+     75%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+    
+}

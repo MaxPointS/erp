@@ -1,0 +1,19 @@
+Generating public/private rsa key pair.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home1/amenhakw/.ssh/id_rsa.
+Your public key has been saved in /home1/amenhakw/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:yd+waXHbaKpDhCdn9mcFeVf8hnKSgM9xTEy7yFS4Dvc 
+The key's randomart image is:
++---[RSA 2048]----+
+|         . *+. .o|
+|        . +.*.. o|
+|       . o.=.+ o.|
+|      o.B+=.+.+ o|
+|       BS==.o= . |
+|        ..oBE+   |
+|       .  =o= .  |
+|        .. o     |
+|        .o.      |
++----[SHA256]-----+

@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Title -->
+    <title>الكادي</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="http://alkadisweets.com/assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="http://alkadisweets.com/assets/img/favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://alkadisweets.com/assets/img/favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://alkadisweets.com/assets/img/favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://alkadisweets.com/assets/img/favicon_152x152.png">
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="{{asset('dist/css2/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/slick.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/animate.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/animsition.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/toastr.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/timepicker.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/select2.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/jquery.datetimepicker.min.css')}}" > 
+    
+    <!-- CSS Icons -->
+    <link rel="stylesheet" href="{{asset('dist/css2/themify-icons.css')}}" />
+    <link rel="stylesheet" href="{{asset('dist/css2/font-awesome.min.css')}}" />
+
+    <!-- CSS Theme -->
+    <link id="theme" rel="stylesheet" href="theme-beige.css" />
+
+</head><body>
+<!-- Body Wrapper -->
+<div id="body-wrapper" dir="rtl" class="animsition">
+
+    <!-- Header -->
+<header id="header" class="light fixed">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Logo -->
+                <div class="module module-logo transparent">
+                    <a href="http://alkadisweets.com/">
+                        <img src="http://alkadisweets.com/assets/img/logo-light.png" alt="" >
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <!-- Navigation -->
+                <nav class="module module-navigation right ml-4">
+                    <ul id="nav-main" class="nav nav-main">
+                        <li><a href="http://alkadisweets.com/main/en">English <i class="ti ti-world" ></i></a></li>
+                                                    <li><a class="about-us-li" href="#about-us"><i class="ti ti-view-grid" ></i> من نحن </a></li>
+                                                <li><a href="http://alkadisweets.com/main/track_order"><i class="ti ti-truck" ></i> تتبع الطلب </a></li>
+
+                        
+                                                    <li><a data-toggle="modal" href="#loginModal"><i class="ti ti-shift-left" ></i> تسجيل الدخول</a></li>
+                                            </ul>
+                </nav>
+            </div>
+            <div class="col-md-2">
+                <a href="#" class="module module-cart left"  data-toggle="panel-cart">
+                    <span class="cart-icon">
+                        <i class="ti ti-shopping-cart"></i>
+                        <span class="notification cart-count">0</span>
+                    </span>
+                                            <span class="cart-value">0</span>
+                                    </a>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- Header / End -->
+
+<!-- Header -->
+<header id="header-mobile" class="light">
+
+    <div class="module module-nav-toggle">
+        <a href="#" id="nav-toggle" data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
+    </div>    
+
+    <div class="module module-logo">
+        <a href="http://alkadisweets.com/">
+            <img src="http://alkadisweets.com/assets/img/logo-mobile.png" alt="">
+        </a>
+    </div>
+
+    <a href="#"  class="module module-cart" data-toggle="panel-cart">
+        <i class="ti ti-shopping-cart"></i>
+        <span class="notification cart-count">0</span>
+    </a>
+
+</header>
+<!-- Header / End -->    <div id="content">
+        <!-- Section - Main -->
+<section class="section header-mt-10 section-main section-main-1 bg-dark">
+    <div class="container dark col-md-12 " style="padding:0px !important" >
+        <div class="slide-container">
+
+            <div class="bg-image zooming">
+                <img src="http://alkadisweets.com/assets/img/photos/slider-confectionaries-min.jpg" alt="">
+            </div>
+            <h2 class="hide-sm" >منزل لحظات لذيذة &nbsp;&nbsp;&nbsp;</h2>
+            <div class="content dark">
+                <div id="section-main-1-carousel-content">
+                    <div class="content-inner">
+
+                        <form method="POST" action="http://alkadisweets.com/main/menu" class="delivery-pickup-form">
+                            <div class="row text-lg" >
+                                <div class="col-6 text-center">
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio" checked name="delivery_pickup_option" value="delivery" class="delivery_pickup_option custom-control-input">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">التوصيل</span>
+                                    </label>
+                                </div>
+                                <div id="temp-pickup-radio" class="col-6 text-center">
+                                    <label class="custom-control custom-radio">
+                                        <input type="radio"  name="delivery_pickup_option" value="pick_up" class="delivery_pickup_option custom-control-input">
+                                        <span class="custom-control-indicator"></span>
+                                        <span class="custom-control-description">الاستلام</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row" id="choose_area" >
+                                <div class="form-group col-sm-12">
+                                    <div class="select-container">
+                                        <select name="area" class="form-control select2" style="width:100%;">
+                                            <option value="">اختر منطقتك</option>
+                                                                                                <optgroup label="محافظة العاصمة">
+                                                                                                                            <option   value="2">العديلية </option>
+                                                                                                                                    <option   value="3">بنيد القار </option>
+                                                                                                                                    <option   value="4">الدعية </option>
+                                                                                                                                    <option   value="5">الدسمة </option>
+                                                                                                                                    <option   value="6">دسمان </option>
+                                                                                                                                    <option   value="7">الدوحة </option>
+                                                                                                                                    <option   value="8">الفيحاء </option>
+                                                                                                                                    <option   value="9">غرناطة </option>
+                                                                                                                                    <option   value="10">جابر الأحمد </option>
+                                                                                                                                    <option   value="11">كيفان </option>
+                                                                                                                                    <option   value="12">الخالدية </option>
+                                                                                                                                    <option   value="13">مدينة الكويت </option>
+                                                                                                                                    <option   value="14">المنصورية </option>
+                                                                                                                                    <option   value="15">المرقاب </option>
+                                                                                                                                    <option   value="16">
+معسكرات المباركية </option>
+                                                                                                                                    <option   value="17">النهضة </option>
+                                                                                                                                    <option   value="18">النزهة </option>
+                                                                                                                                    <option   value="19">القادسية </option>
+                                                                                                                                    <option   value="21">قرطبة </option>
+                                                                                                                                    <option   value="22">الروضة </option>
+                                                                                                                                    <option   value="24">الشامية </option>
+                                                                                                                                    <option   value="26">الشويخ الصناعية </option>
+                                                                                                                                    <option   value="27">الصليبخات </option>
+                                                                                                                                    <option   value="28">السرة </option>
+                                                                                                                                    <option   value="29">اليرموك </option>
+                                                                                                                                    <option   value="50">الأندلس </option>
+                                                                                                                                    <option   value="100">القيروان </option>
+                                                                                                                    </optgroup>
+                                                                                                    <optgroup label="محافظة حولي">
+                                                                                                                            <option   value="30">البدع </option>
+                                                                                                                                    <option   value="31">بيان </option>
+                                                                                                                                    <option   value="32">حولي </option>
+                                                                                                                                    <option   value="34">الجابرية </option>
+                                                                                                                                    <option   value="35">ميدان حولي </option>
+                                                                                                                                    <option   value="36">مشرف </option>
+                                                                                                                                    <option   value="37">
+
+ضاحية مبارك العبدالله
+ </option>
+                                                                                                                                    <option   value="38">الرميثية </option>
+                                                                                                                                    <option   value="39">السلام </option>
+                                                                                                                                    <option   value="40">السالمية </option>
+                                                                                                                                    <option   value="41">سلوى </option>
+                                                                                                                                    <option   value="43">الشهداء </option>
+                                                                                                                                    <option   value="44">الصديق </option>
+                                                                                                                                    <option   value="45">الزهراء </option>
+                                                                                                                                    <option   value="126">منطقة الوزارات </option>
+                                                                                                                                    <option   value="127">مشرف بالاس جرندس </option>
+                                                                                                                                    <option   value="178">السرة </option>
+                                                                                                                    </optgroup>
+                                                                                                    <optgroup label="محافظة الفروانية">
+                                                                                                                            <option   value="47">عبد الله المبارك - غرب جليب الشيوخ </option>
+                                                                                                                                    <option   value="51">العارضية </option>
+                                                                                                                                    <option   value="53">منطقة التخزين العارضية </option>
+                                                                                                                                    <option   value="54">إشبيلية </option>
+                                                                                                                                    <option   value="55">الضجيج </option>
+                                                                                                                                    <option   value="57">الفروانية </option>
+                                                                                                                                    <option   value="58">الفردوس </option>
+                                                                                                                                    <option   value="59">جليب الشيوخ
+ </option>
+                                                                                                                                    <option   value="60">خيطان </option>
+                                                                                                                                    <option   value="61">العمرية </option>
+                                                                                                                                    <option   value="62">الرابية </option>
+                                                                                                                                    <option   value="64">الرقعي </option>
+                                                                                                                                    <option   value="65">رحاب </option>
+                                                                                                                                    <option   value="66">صباح الناصر </option>
+                                                                                                                    </optgroup>
+                                                                                                    <optgroup label="محافظة مبارك الكبير">
+                                                                                                                            <option   value="75">فهد الأحمد </option>
+                                                                                                                                    <option   value="109">أبو فطيرة </option>
+                                                                                                                                    <option   value="110">أبو الحصانية </option>
+                                                                                                                                    <option   value="111">العدان </option>
+                                                                                                                                    <option   value="112">المسايل </option>
+                                                                                                                                    <option   value="113">القرين </option>
+                                                                                                                                    <option   value="114">القصور </option>
+                                                                                                                                    <option   value="117">المسيلة </option>
+                                                                                                                                    <option   value="118">مبارك الكبير </option>
+                                                                                                                                    <option   value="119">صباح السالم </option>
+                                                                                                                                    <option   value="164">ام الهيمان </option>
+                                                                                                                    </optgroup>
+                                                                                                    <optgroup label="محافظة الأحمدي">
+                                                                                                                            <option   value="68">أبو حليفة </option>
+                                                                                                                                    <option   value="72">الظهر </option>
+                                                                                                                                    <option   value="74">العقيلة </option>
+                                                                                                                                    <option   value="76">الفحيحيل </option>
+                                                                                                                                    <option   value="77">الفنطاس </option>
+                                                                                                                                    <option   value="78">هديه </option>
+                                                                                                                                    <option   value="82">المهبولة </option>
+                                                                                                                                    <option   value="83">المنقف </option>
+                                                                                                                                    <option   value="90">الصباحية </option>
+                                                                                                                                    <option   value="120">صبحان الصناعية </option>
+                                                                                                                                    <option   value="122">غرب ابو فطيرة الحرفية </option>
+                                                                                                                                    <option   value="165">الاحمدي </option>
+                                                                                                                                    <option   value="166">جابر العلي  </option>
+                                                                                                                                    <option   value="177">الرقه </option>
+                                                                                                                    </optgroup>
+                                                                                                    <optgroup label="محافظة الجهراء">
+                                                                                                                            <option   value="94">النعيم </option>
+                                                                                                                                    <option   value="96">الجهراء </option>
+                                                                                                                                    <option   value="98">النسيم </option>
+                                                                                                                                    <option   value="99">العيون </option>
+                                                                                                                                    <option   value="101">القصر </option>
+                                                                                                                                    <option   value="102">سعد العبد الله </option>
+                                                                                                                                    <option   value="103">الصليبية الصناعية 1 </option>
+                                                                                                                                    <option   value="104">الصليبية الصناعية 2 </option>
+                                                                                                                                    <option   value="105">الصليبية سكني </option>
+                                                                                                                                    <option   value="107">تيماء </option>
+                                                                                                                                    <option   value="108">الواحة </option>
+                                                                                                                                    <option   value="162">قسائم العثمان </option>
+                                                                                                                                    <option   value="163">النسيم الجديده </option>
+                                                                                                                    </optgroup>
+                                                                                        </select>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <!-- <div class="row" id="choose_branch" style="display:none">
+                                <div class="form-group col-sm-12">
+                                    <div class="select-container">
+                                        <select id="restaurant_branch" name="restaurant_branch" class="form-control select2" style="width:100%;">
+                                            <option value="" >اختر الفرع</option>
+                                                                                                <option  value="1" >الكادي الجهراء </option>
+                                                                                                <option  value="2" >الكادي عارضية </option>
+                                                                                                <option  value="3" >الكادي مهبولة </option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block btn-sm btn-submit" type="submit">
+                                    <span class="description">المتابعة</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section - Menu -->
+<section class="section pb-0 protrude" style="direction:rtl">
+<h1 class="text-center text-primary">العروض</h1>
+                <div class="menu-sample-carousel carousel inner-controls" data-slick='{
+                    "dots": true,
+                    "slidesToShow": 5,
+                    "slidesToScroll": 1,
+                    "infinite": true,
+                    "rtl":true,
+                    "responsive": [
+                        {
+                            "breakpoint": 991,
+                            "settings": {
+                                "slidesToShow": 2,
+                                "slidesToScroll": 1
+                            }
+                        },
+                        {
+                            "breakpoint": 690,
+                            "settings": {
+                                "slidesToShow": 1,
+                                "slidesToScroll": 1
+                            }
+                        }
+                    ]
+                }'>
+        
+        
+                                <a href="http://alkadisweets.com/" >
+                        <div style="height:250px;background-image:url(http://al-kadi.grablugmah.com/admin/uploads/banner_images/c5ceg.jpg);background-size:cover;border:2px solid #ffffff;"></div>
+                    </a>
+                                    <a href="http://alkadisweets.com/" >
+                        <div style="height:250px;background-image:url(http://al-kadi.grablugmah.com/admin/uploads/banner_images/2wgn5.jpg);background-size:cover;border:2px solid #ffffff;"></div>
+                    </a>
+                                    <a href="http://alkadisweets.com/	" >
+                        <div style="height:250px;background-image:url(http://al-kadi.grablugmah.com/admin/uploads/banner_images/u54bf.jpg);background-size:cover;border:2px solid #ffffff;"></div>
+                    </a>
+                                    <a href="http://alkadisweets.com/	" >
+                        <div style="height:250px;background-image:url(http://al-kadi.grablugmah.com/admin/uploads/banner_images/fq4me.jpg);background-size:cover;border:2px solid #ffffff;"></div>
+                    </a>
+                                    <a href="http://alkadisweets.com/	" >
+                        <div style="height:250px;background-image:url(http://al-kadi.grablugmah.com/admin/uploads/banner_images/4tsxe.jpg);background-size:cover;border:2px solid #ffffff;"></div>
+                    </a>
+                                    <a href="http://alkadisweets.com/" >
+                        <div style="height:250px;background-image:url(http://al-kadi.grablugmah.com/admin/uploads/banner_images/o4jyn.jpg);background-size:cover;border:2px solid #ffffff;"></div>
+                    </a>
+                            </div>
+</section>
+
+<section class="section pb-0 protrude" style="display:none;">
+
+
+                <div class="menu-sample-carousel carousel inner-controls" data-slick='{
+                    "dots": true,
+                    "slidesToShow": 5,
+                    "slidesToScroll": 1,
+                    "infinite": true,
+                    "responsive": [
+                        {
+                            "breakpoint": 991,
+                            "settings": {
+                                "slidesToShow": 2,
+                                "slidesToScroll": 1
+                            }
+                        },
+                        {
+                            "breakpoint": 690,
+                            "settings": {
+                                "slidesToShow": 1,
+                                "slidesToScroll": 1
+                            }
+                        }
+                    ]
+                }'>
+        
+        
+                                <div style="height:250px;background-image:url(assets/img/photos/ins2.jpg);background-size:cover;border:2px solid #ffffff;" >
+                        <a href="assets/img/photos/ins2.jpg" target="_blank">
+                            <h3 class="title">
+                                <i class="ti-new-window" ></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                                    <div style="height:250px;background-image:url(assets/img/photos/ins4.jpg);background-size:cover;border:2px solid #ffffff;" >
+                        <a href="assets/img/photos/ins4.jpg" target="_blank">
+                            <h3 class="title">
+                                <i class="ti-new-window" ></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                                    <div style="height:250px;background-image:url(assets/img/photos/ins3.jpg);background-size:cover;border:2px solid #ffffff;" >
+                        <a href="assets/img/photos/ins3.jpg" target="_blank">
+                            <h3 class="title">
+                                <i class="ti-new-window" ></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                                    <div style="height:250px;background-image:url(assets/img/photos/ins1.jpg);background-size:cover;border:2px solid #ffffff;" >
+                        <a href="assets/img/photos/ins1.jpg" target="_blank">
+                            <h3 class="title">
+                                <i class="ti-new-window" ></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                                    <div style="height:250px;background-image:url(assets/img/photos/ins4.jpg);background-size:cover;border:2px solid #ffffff;" >
+                        <a href="assets/img/photos/ins4.jpg" target="_blank">
+                            <h3 class="title">
+                                <i class="ti-new-window" ></i>
+                            </h3>
+                        </a>
+                    </div>
+
+                            </div>
+
+</section>
+
+<!-- <section class="section mb-3 section-bg-edge" id="about-us" style="padding-top: 4rem">
+    <div class="image left col-md-6 pull-md-6">
+        <div class="bg-image"><img src="http://alkadisweets.com/assets/img/photos/about-bg.jpg" alt=""></div>
+    </div>
+    <div class="image right col-md-6 push-md-6">
+        <div class="bg-image"><img src="http://alkadisweets.com/assets/img/photos/pattern2.jpg" alt=""></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3 text-center probootstrap-animate">
+                <div class="probootstrap-heading dark">
+                    <div class="rate mb-5 rate-lg"></div>
+                    <h1 class="text-primary" >الكادي</h1>
+                </div>
+                <p class="mb-5" > 
+                منذ انطلاقتنا في عام ٢٠١٠ وحلويات الكادي تُبدع في تقديم تشكيلة واسعة من أشهى منتجاتها واضعين نصب أعيننا رضا عملائنا الذين يعشقون الاستمتاع بمذاق حلوياتنا المتميز مع الأهل والأصدقاء والأحباء في المناسبات المختلفة.
+                <br><br>
+
+                وبفضل ثقة عملائنا توسعت فروعنا لتضم إلى جانب فرع الجهراء ثلاث أفرع أخرى في العارضية والمهبولة ومشرف، وكلها تعمل جنبا الى جنب لإرضاء الذوّاقة من منتجاتنا مثل الشكولاتة البلجيكية وكل أنواع الكيك لكافة المناسبات من أعراس وأعياد ميلاد وتخرج او أي مناسبات أخرى إضافة إلى الأنواع المختلفة من الحلويات والشكولاتة والفطائر.<br><br>
+
+                نفخر في حلويات الكادي أيضا بابتكار صواني التقديم بأشكال وأحجام وألوان متعددة لتجعل من العميل يعيش تجربة فريدة لا مثيل لها في كافة مناسباته بين الأهل والأصدقاء
+                </p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- <section class="section mb-3 mt-3 section-bg-edge" data-section="contact">
+    <div class="bg-image">
+        <img src="http://alkadisweets.com/assets/img/photos/pattern.jpg" alt="">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center probootstrap-animate">
+                <div class="probootstrap-heading dark">
+                    <h1 class="text-primary" >اتصل</h1>
+                </div>
+                <p>
+                لديك سؤال أو اقتراح؟ نحن نحب أن نسمع منك. أرسل لنا رسالة وسوف نسمع منك في أقرب وقت ممكن.
+                </p>
+            </div>
+            <div class="col-md-6 col-md-push-1 probootstrap-animate">
+                <form method="post" id="contact_us" data-validate class="probootstrap-form">
+                    <div class="form-group">
+                        <label for="c_name">اسمك</label>
+                        <div class="form-field">
+                            <input required type="text" id="c_name" name="c_name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_email">بريدك الالكتروني</label>
+                        <div class="form-field">
+                            <input required type="email" name="c_email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="c_message">رسالتك</label>
+                        <div class="form-field">
+                            <textarea required name="c_message" id="c_message" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div id="msg_sent"></div>
+                    <div class="form-group" id="contact_button">
+                        <input type="button" name="c_submit" id="c_submit" value="إرسال رسالة" class="btn btn-primary btn-lg">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>  -->      
+<style> 
+    /* Set the size of the div element that contains the map */
+    #googleMap, #googleMap2 {
+        height: 150px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+    }
+</style>
+<!-- Footer -->
+<footer id="footer" class="bg-dark dark">
+            
+    <div class="container">
+        <!-- Footer 1st Row -->
+        <!-- <div class="footer-first-row row">
+            <div class="col-lg-3 text-center">
+                <a href="http://alkadisweets.com/"><img src="http://alkadisweets.com/assets/img/hesabe.png" alt="" width="258" class="mt-2 mb-5"></a>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="title footer-subtitle mb-0">فرع العارضيه</h5>
+                <ul class="list-posts">
+                    <li>
+                        <span class="date footer-sub-sub-title">شارع محمد نزال المعصب، العارضية، الكويت</span>
+                    </li>
+                    <li>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3479.4737003447217!2d47.91299831509765!3d29.297777382160024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf095727f3b641%3A0xbe69d77e8feb4272!2sAlkadi%20sweetz!5e0!3m2!1sen!2sin!4v1566898794504!5m2!1sen!2sin" 
+                                width="100%" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="title footer-subtitle mb-0">فرع المهبوله</h5>
+                <ul class="list-posts">
+                    <li>
+                        <span class="date footer-sub-sub-title">سالم الصبا، الكويت</span>
+                    </li>
+                    <li>
+                        <div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.218663370137!2d48.11920111509461!3d29.15822798221337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf090ac0f7323b%3A0x3c088b132162f670!2z2K3ZhNmI2YrYp9iqINin2YTZg9in2K_ZiiBBbCBLYWRpIFN3ZWV0cw!5e0!3m2!1sen!2sin!4v1566898995234!5m2!1sen!2sin" 
+                                width="100%" height="220" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h5 class="title footer-subtitle mb-5">معلومات</h5>
+                <ul class="list-posts">
+                    <li>
+                        <span class="title">ساعات العمل:</span>
+                        <span class="date">من 7:00 صباحًا إلى 11:00 مساءً</span>
+                    </li>
+                    <li>
+                        <span class="title">دعم العملاء</span>
+                        <span class="date">24573554 </span>
+                    </li>
+                    <li>
+                        <span class="title">البريد الإلكتروني</span>
+                        <span class="date">contact@alkadi.com</span>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=96566095323" target="_blank" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/alkadisweetz" target="_blank" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div> -->
+        <!-- Footer 2nd Row -->
+        <div class="footer-second-row text-center">
+            <span class="text-muted">حقوق النشر الكادي 2020©</span>
+        </div>
+    </div>
+
+    <!-- Back To Top -->
+    <a href="#" id="back-to-top"><i class="ti ti-angle-up"></i></a>
+
+</footer>
+<!-- Footer / End -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ9PnNW3s3rDPRr50Te5mpmsvtf6rNDZo"></script>
+<script>
+    var myCenter = new google.maps.LatLng(51.059955, -114.211807);
+    var myCenter2 = new google.maps.LatLng(50.9156772, -113.9640719);
+
+    function initialize() {
+        var mapProp = {
+            center: myCenter,
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        var marker = new google.maps.Marker({
+            position: myCenter,
+            animation: google.maps.Animation.DROP,
+            icon: 'http://www.fergusandbix.com/images/FB-pin.png'
+        });
+        marker.setMap(map);
+
+        var mapProp2 = {
+            center: myCenter2,
+            zoom: 14,
+            mapTypeId: google.maps.MapTypeId.ROADMAP2
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap2"), mapProp2);
+        var marker = new google.maps.Marker({
+            position: myCenter2,
+            animation: google.maps.Animation.DROP,
+            icon: 'http://www.fergusandbix.com/images/FB-pin.png'
+        });
+        marker.setMap(map);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script> -->
+
+    </div>
+        <style>
+    #panel-cart .panel-cart-action{
+        background-color: #ffffff;
+        padding: 1rem 0;
+    }
+    </style>
+  
+<!-- Panel Cart -->
+<div id="panel-cart">
+    <div class="panel-cart-container">
+        <div class="panel-cart-title">
+            <h5 class="title">عربة تسوقك</h5>
+            <button class="close" data-toggle="panel-cart"><i class="ti ti-close"></i></button>
+        </div>
+        <div class="panel-cart-content text-md">
+                        <div class="page-content" >
+                <p class="text-center" >سلة المشتريات فارغة</p>
+            </div>
+                    </div>
+    </div>
+    
+    
+            <div class="panel-cart-action">
+            <div style="width:42%;float:right" class="text-center" >
+                <button data-toggle="modal" data-target="#loginModal" class="btn btn-outline-secondary text-center btn-md">
+                    <span>تسجيل الدخول</span>
+                </button>
+            </div>
+
+            <div style="width:8%;float:right" class="text-center" >OR</div>
+
+            <div style="width:42%;float:right" class="text-center" >
+                <button id="go-to-checkout" class="btn btn-secondary text-center btn-md">
+                    <span>تتبع الطلب</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel Mobile -->
+    <nav id="panel-mobile">
+        <div class="module module-logo bg-light light">
+            <a href="http://alkadisweets.com/">
+                <img src="http://alkadisweets.com/assets/img/logo-light.png" alt="" width="128">
+            </a>
+            <button class="close" data-toggle="panel-mobile"><i class="ti ti-close"></i></button>
+        </div>
+        <nav class="module module-navigation"></nav>
+        <div class="module module-social">
+            <h6 class="text-sm mb-3">تابعنا!</h6>
+            <a href="https://api.whatsapp.com/send?phone=96566095323" target="_blank" class="icon icon-social icon-circle icon-sm icon-facebook"><i class="fa fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/alkadisweetz" target="_blank" class="icon icon-social icon-circle icon-sm icon-instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <!-- Body Overlay -->
+    <div id="body-overlay"></div>
+</div>
+
+<!-- Modal / Contact -->
+<div class="modal fade" id="contactModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-right">
+            <div class="modal-header modal-header-lg dark bg-dark">
+                <div class="bg-image"><img src="http://alkadisweets.com/assets/img/photos/modal-add.jpg" alt=""></div>
+                <h4 class="modal-title">
+                دعم العملاء <br>
+                    <a href="tel:69992974" >يتصل <b>69992974</b></a>
+                    <br>
+                    <a href="mailto:contact@alkadi.com" >البريد الإلكتروني <b>contact@alkadi.com</b></a>
+
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal / Login -->
+<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-right">
+            <div class="modal-header modal-header-lg dark bg-dark">
+                <div class="bg-image"><img src="http://alkadisweets.com/assets/img/photos/bg-croissant.jpg" alt=""></div>
+                <h4 class="modal-title">تسجيل الدخول</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ti-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <form name="" id="login" method="POST" action="http://alkadisweets.com/auth/login" class="validate-form">
+                    <div class="form-group">
+                        <label>البريد الإلكتروني:</label>
+                        <input type="email" required name="email" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <label>كلمه السر:</label>
+                        <input type="password" required name="password" class="form-control" >
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-6" >
+                            <div class="form-group">
+                                <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" value="1" name="remember" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">تذكر حسابي</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-right" >
+                            <a href="http://alkadisweets.com/main/forgot_password" >
+                            هل نسيت كلمة المرور؟          
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal"><span>إلغاء</span></button>
+                        <button type="submit" class="btn btn-primary"><span>تسجيل الدخول</span></button>
+                        <br><br>
+                        عميل جديد؟<a href="http://alkadisweets.com/main/register"><b>إنشاء حساب</b></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS Plugins -->
+<script src="{{asset('dist/js2/jquery.js')}}"></script>
+<script src="{{asset('dist/js2/tether.min.js')}}"></script>
+<script src="{{asset('dist/js2/bootstrap.js')}}"></script>
+<script src="{{asset('dist/js2/slick.min.js')}}"></script>
+<script src="{{asset('dist/js2/jquery.appear.js')}}"></script>
+<script src="{{asset('dist/js2/jquery.scrollTo.min.js')}}"></script>
+<script src="{{asset('dist/js2/jquery.localScroll.min.js')}}"></script>
+<script src="{{asset('dist/js2/jquery.validate.min.js')}}"></script>
+<script src="{{asset('dist/js2/jquery.mb.YTPlayer.min.js')}}"></script>
+<script src="{{asset('dist/js2/twitterFetcher_min.js')}}"></script>
+<script src="{{asset('dist/js2/skrollr.min.js')}}"></script>
+<script src="{{asset('dist/js2/animsition.min.js')}}"></script>
+<script src="{{asset('dist/js2/toastr.min.js')}}"></script>
+<script src="{{asset('dist/js2/timepicker.js')}}"></script>
+<script src="{{asset('dist/js2/select2.full.min.js')}}"></script>
+<script src="{{asset('dist/js2/jquery.datetimepicker.full.min.js')}}"></script>
+
+<!-- JS Core -->
+<script src="{{asset('dist/js2/core.js')}}"></script>
+<script src="{{asset('dist/js2/custom.js')}}"></script>
+<script src="{{asset('dist/js2/formValidation.js')}}"></script>
+<script src="{{asset('dist/js2/bootstrap.min.js')}}"></script>
+<script src="{{asset('dist/js2/validation.js')}}"></script>
+<script src="{{asset('dist/js2/my_account.js')}}"></script>
+<script src="{{asset('dist/js2/js23.js')}}"></script>
+<script src="{{asset('dist/js2/js24.js')}}"></script>
+
+<script>
+    toastr.options = {
+        "debug": false,
+        "positionClass": "toast-bottom-right",
+        "onclick": null,
+        "showMethod": "slideDown",
+        "hideMethod": "slideUp",
+        "preventDuplicates": true
+    }
+
+    $('.select2').select2();
+
+    $('#guest_email').on('keyup', function() {
+        $("#guest_email").prop('required',false);
+        if ($('#guest_email').val()) {
+            $("#guest_email").prop('required',true);
+        }
+    })
+
+</script>
+
+
+</body>
+
+</html>

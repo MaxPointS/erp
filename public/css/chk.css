@@ -1,0 +1,475 @@
+.mt-android,
+.mt-android-orange,
+.mt-android-pink,
+.mt-android-violet,
+.mt-android-indigo {
+    display: inline-block;
+    box-sizing: border-box
+}
+
+.mt-android label,
+.mt-android-orange label,
+.mt-android-pink label,
+.mt-android-violet label,
+.mt-android-indigo label {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 4em;
+    height: 1.75em;
+    border-radius: .875em;
+    background-image: linear-gradient(to right, #848484 0%, #848484 50%, #7cbcbf 50%, #7cbcbf 100%);
+    background-size: 8em 1.7em;
+    transition: all .3s ease
+}
+
+.mt-android label:before,
+.mt-android-orange label:before,
+.mt-android-pink label:before,
+.mt-android-violet label:before,
+.mt-android-indigo label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2.25em;
+    height: 2.25em;
+    top: -0.25em;
+    left: 0;
+    border-radius: 2em;
+    background: #fff;
+    transition: .3s ease;
+    box-shadow: 0 .125em .375em rgba(0, 0, 0, .5)
+}
+
+.mt-android input,
+.mt-android-orange input,
+.mt-android-pink input,
+.mt-android-violet input,
+.mt-android-indigo input {
+    position: absolute;
+    box-sizing: border-box;
+    height: 0;
+    width: 0;
+    font-size: inherit;
+    margin: 0;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.mt-android input:focus,
+.mt-android-orange input:focus,
+.mt-android-pink input:focus,
+.mt-android-violet input:focus,
+.mt-android-indigo input:focus {
+    outline: none
+}
+
+.mt-android input:checked+label,
+.mt-android-orange input:checked+label,
+.mt-android-pink input:checked+label,
+.mt-android-violet input:checked+label,
+.mt-android-indigo input:checked+label {
+    background-position: -100%
+}
+
+.mt-android input:checked+label:before,
+.mt-android-orange input:checked+label:before,
+.mt-android-pink input:checked+label:before,
+.mt-android-violet input:checked+label:before,
+.mt-android-indigo input:checked+label:before {
+    transform: translateX(1.75em)
+}
+
+.mt-android input:disabled+label,
+.mt-android-orange input:disabled+label,
+.mt-android-pink input:disabled+label,
+.mt-android-violet input:disabled+label,
+.mt-android-indigo input:disabled+label {
+    background: #ccc !important;
+    cursor: not-allowed !important
+}
+
+.mt-android input:disabled+label:before,
+.mt-android-orange input:disabled+label:before,
+.mt-android-pink input:disabled+label:before,
+.mt-android-violet input:disabled+label:before,
+.mt-android-indigo input:disabled+label:before {
+    background: #ccc !important;
+    box-shadow: 0 .125em .375em rgba(0, 0, 0, .5) !important
+}
+
+.mt-android-indigo label {
+    background-image: linear-gradient(to right, #848484 0%, #848484 50%, #9fa8da 50%, #9fa8da 100%)
+}
+
+.mt-android-violet label {
+    background-image: linear-gradient(to right, #848484 0%, #848484 50%, #ce93d8 50%, #ce93d8 100%)
+}
+
+.mt-android-pink label {
+    background-image: linear-gradient(to right, #848484 0%, #848484 50%, #f48fb1 50%, #f48fb1 100%)
+}
+
+.mt-android-orange label {
+    background-image: linear-gradient(to right, #848484 0%, #848484 50%, #ffcc80 50%, #ffcc80 100%)
+}
+
+.mt-check,
+.mt-check-fruit,
+.mt-check-matte,
+.mt-check-pink,
+.mt-check-garden {
+    display: inline-block;
+    box-sizing: border-box
+}
+
+.mt-check label,
+.mt-check-fruit label,
+.mt-check-matte label,
+.mt-check-pink label,
+.mt-check-garden label {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 7em;
+    height: 3em;
+    border-radius: 1.5em;
+    background: #2e394d;
+    border: none;
+    transition: all .3s ease
+}
+
+.mt-check label:before,
+.mt-check-fruit label:before,
+.mt-check-matte label:before,
+.mt-check-pink label:before,
+.mt-check-garden label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2.4em;
+    height: 2.4em;
+    top: .3em;
+    left: .3em;
+    border-radius: 2.5em;
+    background: #f0134d;
+    transition: .3s ease
+}
+
+.mt-check input,
+.mt-check-fruit input,
+.mt-check-matte input,
+.mt-check-pink input,
+.mt-check-garden input {
+    position: absolute;
+    box-sizing: border-box;
+    height: 0;
+    width: 0;
+    font-size: inherit;
+    margin: 0;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.mt-check input:focus,
+.mt-check-fruit input:focus,
+.mt-check-matte input:focus,
+.mt-check-pink input:focus,
+.mt-check-garden input:focus {
+    outline: none
+}
+
+.mt-check input:before,
+.mt-check-fruit input:before,
+.mt-check-matte input:before,
+.mt-check-pink input:before,
+.mt-check-garden input:before,
+.mt-check input:after,
+.mt-check-fruit input:after,
+.mt-check-matte input:after,
+.mt-check-pink input:after,
+.mt-check-garden input:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: .25em;
+    border-radius: .125em;
+    background: #fff;
+    transition: .3s ease
+}
+
+.mt-check input:before,
+.mt-check-fruit input:before,
+.mt-check-matte input:before,
+.mt-check-pink input:before,
+.mt-check-garden input:before {
+    width: 1.6875em;
+    transform: rotate(-45deg) translate(-0.525em, 1.425em)
+}
+
+.mt-check input:after,
+.mt-check-fruit input:after,
+.mt-check-matte input:after,
+.mt-check-pink input:after,
+.mt-check-garden input:after {
+    width: 1.6875em;
+    transform: rotate(45deg) translate(1.425em, 0.525em)
+}
+
+.mt-check input:checked:before,
+.mt-check-fruit input:checked:before,
+.mt-check-matte input:checked:before,
+.mt-check-pink input:checked:before,
+.mt-check-garden input:checked:before {
+    width: 1.5625em;
+    transform: rotate(-45deg) translate(2.5375em, 4.55em)
+}
+
+.mt-check input:checked:after,
+.mt-check-fruit input:checked:after,
+.mt-check-matte input:checked:after,
+.mt-check-pink input:checked:after,
+.mt-check-garden input:checked:after {
+    width: .73em;
+    transform: rotate(45deg) translate(4.55em, -2.1625em)
+}
+
+.mt-check input:checked+label:before,
+.mt-check-fruit input:checked+label:before,
+.mt-check-matte input:checked+label:before,
+.mt-check-pink input:checked+label:before,
+.mt-check-garden input:checked+label:before {
+    background: #40bfc1;
+    transform: translateX(4em)
+}
+
+.mt-check input:disabled:before,
+.mt-check-fruit input:disabled:before,
+.mt-check-matte input:disabled:before,
+.mt-check-pink input:disabled:before,
+.mt-check-garden input:disabled:before,
+.mt-check input:disabled:after,
+.mt-check-fruit input:disabled:after,
+.mt-check-matte input:disabled:after,
+.mt-check-pink input:disabled:after,
+.mt-check-garden input:disabled:after {
+    cursor: not-allowed !important
+}
+
+.mt-check input:disabled+label,
+.mt-check-fruit input:disabled+label,
+.mt-check-matte input:disabled+label,
+.mt-check-pink input:disabled+label,
+.mt-check-garden input:disabled+label {
+    background: #ccc !important;
+    cursor: not-allowed !important
+}
+
+.mt-check input:disabled+label:before,
+.mt-check-fruit input:disabled+label:before,
+.mt-check-matte input:disabled+label:before,
+.mt-check-pink input:disabled+label:before,
+.mt-check-garden input:disabled+label:before {
+    background: #ddd !important
+}
+
+.mt-check-garden label:before {
+    background: #ff2e63
+}
+
+.mt-check-garden input:checked+label:before {
+    background: #21bf73
+}
+
+.mt-check-pink label:before {
+    background: #ffe3ed
+}
+
+.mt-check-pink input:before,
+.mt-check-pink input:after {
+    background: #2e394d
+}
+
+.mt-check-pink input:checked+label:before {
+    background: #beebe9
+}
+
+.mt-check-matte label:before {
+    background: #c9485b
+}
+
+.mt-check-matte input:checked+label:before {
+    background: #75b79e
+}
+
+.mt-check-fruit label:before {
+    background: #ff8364
+}
+
+.mt-check-fruit input:checked+label:before {
+    background: #5f6caf
+}
+
+.mt-emoji,
+.mt-emoji-like,
+.mt-emoji-mute,
+.mt-emoji-pet,
+.mt-emoji-gender,
+.mt-emoji-mood {
+    display: inline-block;
+    box-sizing: border-box
+}
+
+.mt-emoji label,
+.mt-emoji-like label,
+.mt-emoji-mute label,
+.mt-emoji-pet label,
+.mt-emoji-gender label,
+.mt-emoji-mood label {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 7em;
+    height: .8em;
+    border-radius: 1em;
+    background: #fff;
+    border: .2em solid #888;
+    transition: all .3s ease
+}
+
+.mt-emoji label:before,
+.mt-emoji-like label:before,
+.mt-emoji-mute label:before,
+.mt-emoji-pet label:before,
+.mt-emoji-gender label:before,
+.mt-emoji-mood label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    font-size: 3em;
+    transition: .3s ease;
+    left: 0;
+    top: -0.6em
+}
+
+.mt-emoji input,
+.mt-emoji-like input,
+.mt-emoji-mute input,
+.mt-emoji-pet input,
+.mt-emoji-gender input,
+.mt-emoji-mood input {
+    position: absolute;
+    box-sizing: border-box;
+    height: 0;
+    width: 0;
+    font-size: inherit;
+    margin: 0;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none
+}
+
+.mt-emoji input:focus,
+.mt-emoji-like input:focus,
+.mt-emoji-mute input:focus,
+.mt-emoji-pet input:focus,
+.mt-emoji-gender input:focus,
+.mt-emoji-mood input:focus {
+    outline: none
+}
+
+.mt-emoji input:checked+label:before,
+.mt-emoji-like input:checked+label:before,
+.mt-emoji-mute input:checked+label:before,
+.mt-emoji-pet input:checked+label:before,
+.mt-emoji-gender input:checked+label:before,
+.mt-emoji-mood input:checked+label:before {
+    transform: translateX(1.2em)
+}
+
+.mt-emoji input:disabled+label,
+.mt-emoji-like input:disabled+label,
+.mt-emoji-mute input:disabled+label,
+.mt-emoji-pet input:disabled+label,
+.mt-emoji-gender input:disabled+label,
+.mt-emoji-mood input:disabled+label {
+    cursor: not-allowed !important
+}
+
+.mt-emoji-mood label:before {
+    content: "😄"
+}
+
+.mt-emoji-mood input:checked+label:before {
+    content: "😠"
+}
+
+.mt-emoji-gender label:before {
+    content: "👨"
+}
+
+.mt-emoji-gender input:checked+label:before {
+    content: "👩"
+}
+
+.mt-emoji-pet label:before {
+    content: "🐶"
+}
+
+.mt-emoji-pet input:checked+label:before {
+    content: "🐱"
+}
+
+.mt-emoji-mute label:before {
+    content: "🔇"
+}
+
+.mt-emoji-mute input:checked+label:before {
+    content: "🔊"
+}
+
+.mt-emoji-like label:before {
+    content: "👍"
+}
+
+.mt-emoji-like input:checked+label:before {
+    content: "👎"
+}
+
+.mt-star,
+.mt-star-golden,
+.mt-star-pink,
+.mt-star-tomato,
+.mt-star-garden {
+    display: inline-block;
+    box-sizing: border-box
+}
+
+.mt-star label,
+.mt-star-golden label,
+.mt-star-pink label,
+.mt-star-tomato label,
+.mt-star-garden label {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 5em;
+    height: 5em;
+    transition: all .3s ease;
+    overflow: hidden;
+    clip-path: polygon(88.42% 39.625%, 62.765% 36.275%, 51.645% 12.85%, 51.58018% 12.7258%, 48.355% 12.85%, 37.235% 36.275%, 11.58% 39.625%, 10.40617% 40.27148%, 10.565% 42.7%, 29.365% 60.54%, 24.62% 86.05%, 25.83849% 88.08153%, 27.285% 87.945%, 50% 75.545%, 72.715% 87.94%, 75.40571% 86.24281%, 75.38% 86.045%, 70.635% 60.53%, 89.435% 42.69%, 88.42% 39.625%, 67.405% 58.615%, 66.89479% 59.48382%, 66.88% 60.235%);
+    -webkit-clip-path: polygon(88.42% 39.625%, 62.765% 36.275%, 51.645% 12.85%, 51.58018% 12.7258%, 48.355% 12.85%, 37.235% 36.275%, 11.58% 39.625%, 10.40617% 40.27148%, 10.565% 42.7%, 29.365% 60.54%, 24.62% 86.05%, 25.83849% 88.08153%, 27.285% 87.945%, 50% 75.545%, 72.715% 87.94%, 75.40571% 86.24281%, 75.38% 86.045%, 70.635% 60.53%, 89.435% 42.69%, 88.42% 39.625%, 67.405% 58.615%, 66.89479% 59.48382%, 66.88% 60.235%);
+}
+
