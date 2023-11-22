@@ -5,6 +5,7 @@ namespace App\Listeners;
 use App\Events\paymentEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Notification;
 use Throwable;
 
 class paymentNotify
@@ -20,9 +21,9 @@ class paymentNotify
     /**
      * Handle the event.
      */
-    public function handle(paymentEvent $event)//: void
+    public function handle(paymentEvent $event): void
     {
         //
-        return $event;
+        info($event);
     }
 }

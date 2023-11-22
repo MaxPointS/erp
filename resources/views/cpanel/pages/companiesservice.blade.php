@@ -37,7 +37,7 @@
                         </h5>
                         <br>
                         <div class="pull-end btn-group">
-                            <a href="{{route('Companyedit',$company->uuid)}}" class="btn btn-sm btn-success "> <i class="fa fa-edit"></i></a>
+                            <a href="{{route('companies.edit',$company->id)}}" class="btn btn-sm btn-success "> <i class="fa fa-edit"></i></a>
                             <button class="btn btn-sm btn-warning ">  <i class="fa fa-book"></i> </button>
                             <button class="btn btn-sm btn-danger "> <i class="fa fa-close"></i></button>
                         </div>
@@ -146,7 +146,7 @@
                                             </td>
                                             <td>
 
-                                                <a href="{{ route('EditService', $service->uuid) }}" type="button"
+                                                <a href="{{ route('EditService', $service->id) }}" type="button"
                                                     id="EditBtn" {{-- data-toggle="modal" data-target="#EditArea" --}} class="btn btn-success"><i
                                                         class="fa fa-edit"></i></a>
 

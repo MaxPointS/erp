@@ -2,7 +2,7 @@
 
 @section('content-header')
     {{-- <li class="active">{{ $pageName }}</li> --}}
-@endsection
+@endsection 
 
 
 @section('css')

@@ -10,12 +10,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class cart extends Model
 {
     use HasFactory;
+
     protected $table = "cart";
 
     protected $guarded=[];
 
 
     public function services():HasMany{
-        return $this->HasMany(service::class,"uuid","service_id");
+        return $this->HasMany(service::class,"id","service_id");
     }
 }

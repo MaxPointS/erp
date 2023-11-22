@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("firstname",250);
             $table->string("lastname",250);
             $table->string("tel",50);
-            $table->foreignUuid("govern_id")->constrained("governs")->references("uuid");
+            $table->foreignUuid("govern_id")->constrained("governs");
             $table->string("address",350)->nullable();
             $table->timestamps();
         });

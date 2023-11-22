@@ -15,7 +15,7 @@ class term extends Model
     public $incrementing = false;
     protected $guarded=[];
     public function service() : BelongsTo {
-        return $this->belongsTo(service::class,"service_id","uuid");
+        return $this->belongsTo(service::class);
     }
     
 }

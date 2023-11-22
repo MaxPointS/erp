@@ -11,6 +11,10 @@ class company extends Model
 {
     use HasFactory;
 
+    protected $keyType = 'string';
+
+    // public $incrementing = false;
+
     protected $fillable = [
         "uuid",
         "name",
@@ -25,18 +29,16 @@ class company extends Model
     ];
 
     // protected $primaryKey = "uuid";
-    protected $primaryKey = "uuid";
+    // protected $primaryKey = "uuid";
 
-    protected $keyType = 'string';
 
-    public $incrementing = false;
 
     public function  companyservicetype():BelongsTo{
-        return $this->belongsTo(companyservicetype::class,"companyservicetype_id","uuid");
+        return $this->belongsTo(companyservicetype::class);
     }
 
     public function  services():HasMany{
-        return $this->HasMany(service::class,"company_id","uuid");
+        return $this->HasMany(service::class);
     }
 
 

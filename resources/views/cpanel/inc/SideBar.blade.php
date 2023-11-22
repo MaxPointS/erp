@@ -24,12 +24,12 @@
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-pie-chart"></i>
-                    <span>{{ trans('nav.vehicles') }}</span>
+                    <span>{{ trans('nav.insurance') }}</span>
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('showInsuranceViechle') }}"><i
-                                class="fa fa-circle-o"></i>{{ trans('nav.vehiclesInsuredList') }}</a></li>
+                    <li><a href="{{ route('showInsurance') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.InsuredList') }}</a></li>
 
                     {{-- <li><a href=""><i class="fa fa-circle-o"></i>{{ trans('nav.AddCategories') }}</a></li> --}}
 
@@ -43,17 +43,17 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('showCompaniesList') }}"><i
+                    <li><a href="{{ route('companies.index') }}"><i
                                 class="fa fa-circle-o"></i>{{ trans('nav.Companiesdashboard') }}</a></li>
 
-                    <li><a href="{{ route('CreateCompany') }}"><i
+                    <li><a href="{{ route('companies.create') }}"><i
                                 class="fa fa-circle-o"></i>{{ trans('nav.companiesList') }}</a></li>
 
                     <li><a href="{{ route('AddService') }}"><i
                                 class="fa fa-circle-o"></i>{{ trans('nav.addservice') }}</a></li>
                                 <li><a href="{{ route('addconditions') }}"><i
                                     class="fa fa-circle-o"></i>{{ trans('nav.terms') }}</a></li>
-
+ 
                 </ul>
             </li>
 
@@ -143,6 +143,37 @@
                                 class="fa fa-circle-o"></i>{{ trans('nav.UsersMenu') }}</a>
                     </li>
 
+                    <li>
+                        <a href="{{ route('carlicensetype') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carlicensetype') }}</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('carfactory') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carfactory') }}</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('carfactoryclasses') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carfactoryclasses') }}</a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('carshapes') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carshapes') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('carcolors') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carcolors') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('carfuel') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carfuel') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('carconditions') }}"><i
+                                class="fa fa-circle-o"></i>{{ trans('nav.carconditions') }}</a>
+                    </li>
 
                 </ul>
             </li>

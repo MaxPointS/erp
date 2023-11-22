@@ -48,7 +48,7 @@ class companyController extends Controller
             $subtotalAmount += round($value->totalprice, 3);
         }
 
-        // return   $companiesWithServices ;
+        // return   $cart ;
         return view('front.pages.Menu', compact("companiesWithServices", "cart", "subtotalAmount")); //->with(["subtotalAmount"=>$subtotalAmount]);
     }
 
@@ -66,12 +66,15 @@ class companyController extends Controller
             $subtotalAmount += round($value->totalprice, 3);
         }
 
+
         return view("front.pages.servicedetails", compact("service", "cart", "subtotalAmount"));
     }
 
     public function getCustomerDetails() //:View
     {
         $governs = govern::all();
+        // return $governs;
+
         $cart = cart::with("services")->where("token", "=", session()->get("tokenCart"))->get();
         $subtotalAmount = 0.0;
         if ($cart->count() == 0)
@@ -106,26 +109,8 @@ class companyController extends Controller
             $cartTable = array(array());
             array_push($cartTable[0], $cart);
             return   response()->json($cartTable);
-
-            // return response()->json([
-            //     "CartorTable" => [
-            //         [
-            //             "Price" => $request->ServiceQty * $request->price,
-            //             "Qty" => $request->ServiceQty,
-            //             "uuid" => $request->ServiceID,
-            //             "TotalPrice" => round($request->ServiceQty * $request->price, 3,),
-            //             "ProductName" =>  $cart->services->first()->name,
-            //         ],
-
-            //     ],
-            //     "CartLenth" => 1,
-            //     "CartTotalPrice"=>round($request->ServiceQty * $request->price, 3),
-
-            // ]);
         } else {
             $Existcart = cart::where(["token" => $request->_token, "service_id" => $request->ServiceID])->with("services")->get();
-
-
             foreach ($Existcart as $key => $item) {
                 # code...
                 $item->token = $request->_token;
@@ -137,23 +122,8 @@ class companyController extends Controller
 
             $cartTable = array(array());
             array_push($cartTable[0], $Existcart);
-            // array_push($cartArrayBack["CartorTable"], $Existcart);
 
             return   response()->json($Existcart);
-            // return response()->json([
-            //     "CartorTable" => [
-            //         [
-            //             "Price" => $request->price,
-            //             "Qty" => $request->ServiceQty,
-            //             "uuid" => $request->ServiceID,
-            //             "totalprice" => round($request->ServiceQty * $request->price, 3),
-            //             "ProductName" =>$Existcart->first()->services->first()->name,
-            //             "CartLenth" => $Existcart->count()
-            //         ],
-            //     ],
-            //     "CartLenth" => 1,
-            //     "CartTotalPrice"=>round($request->ServiceQty * $request->price, 3),
-            // ]);
         }
     }
 
@@ -214,7 +184,7 @@ class companyController extends Controller
     public function PayMent(Request $request)
     {
 
-        // return $request;
+        //  return $request;
 
 
         $validate = $request->validate([
@@ -228,12 +198,12 @@ class companyController extends Controller
 
         $newOrderNo = "";
 
-        $getLastOrderNo = order::orderByDesc("id")->first()->id;
+        $getLastOrderNo = order::orderByDesc("id")->first();
         // return $getLastOrderNo;
         if ($getLastOrderNo == null) {
             $newOrderNo = "Order_" . rand(100, 200);
         } else {
-            $ArrayKey = explode("_", $getLastOrderNo);
+            $ArrayKey = explode("_", $getLastOrderNo->id);
             $num = intval($ArrayKey[1]) + 1;
             $newOrderNo = "Order_" . $num;
         }
@@ -259,36 +229,57 @@ class companyController extends Controller
                 "created_at" => now(),
                 "updated_at" => now()
             ]);
-            $customer ->save();
+            $customer->save();
         }
 
-        $order  = order::updateOrCreate([
-            //id	customer_id	paied	totalprice	reference_number	finished	created_at	updated_at	
-            "id"=>$newOrderNo,
-            "customer_id"=>$customer->id,
-            // "paied",
-            "totalprice"=>$subtotalAmount,
-            // "reference_number",
-            // "finished",
-            "created_at" =>now(),
-            "updated_at"=>now(),
-        ]);
+        // return $customer;
+        $order = order::where(["customer_id" => $customer->id, "finished" => false])->orderByDesc("id")->get()->first();
 
-        $order ->save();
+        if ($order == null) {
 
-        if($cart->count()>0){
-            foreach ($cart as $item) {
-                $orderDetails = orderdetail::updateOrCreate([
-                    // "id"=>Str::uuid(),
-                    "service_id"=>$item->service_id,
-                    "order_id"=>$newOrderNo,
-                    "created_at" =>now(),
-                    "updated_at"=>now(),
-                ]);
-                $orderDetails->save();
+            $order  = order::Create([
+                //id	customer_id	paied	totalprice	reference_number	finished	created_at	updated_at	
+                "id" => $newOrderNo,
+                "customer_id" => $customer->id,
+                // "paied",
+                "totalprice" => $subtotalAmount,
+                // "reference_number",
+                // "finished",
+                "created_at" => now(),
+                "updated_at" => now(),
+            ]);
+
+            $order->save();
+        } else {
+
+            $order->customer_id = $customer->id;
+            // $order ->id =$newOrderNo;
+
+            $order->totalprice = $subtotalAmount;
+            $order->updated_at = now();
+            $order->save();
+        }
+
+        $orderDetails = orderdetail::where(["order_id" => $order->id])->get();
+        // return  $orderDetails;
+        if ($orderDetails->count() == 0) {
+
+            if ($cart->count() > 0) {
+                foreach ($cart as $item) {
+
+                    $orderDetails = orderdetail::Create([
+                        // "id"=>Str::uuid(),
+                        "service_id" => $item->service_id,
+                        "order_id" => $newOrderNo,
+                        "created_at" => now(),
+                        "updated_at" => now(),
+                    ]);
+                    $orderDetails->save();
+                }
             }
         }
-    
+
+
 
 
 
@@ -303,7 +294,8 @@ class companyController extends Controller
             "amount" => $subtotalAmount,
             "pg_codes" => ["knet",],
             "currency_code" => "KWD",
-            "order_no"=>$newOrderNo,
+            "order_no" => $newOrderNo."-".rand(12,99999999),
+            "ustomer_id"=>$customer->id,
             "customer_first_name " => $customer->firstname,
             "customer_last_name" => $customer->lastname,
             "customer_phone" => $customer->tel,
@@ -332,9 +324,9 @@ class companyController extends Controller
         $collectresponse = json_decode($response, false);
         $url = $collectresponse->payment_methods[0]->redirect_url;
 
-  
-       
-        return  ;
+
+
+        return $collectresponse;
         // return  redirect($url);
     }
 

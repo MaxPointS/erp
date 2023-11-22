@@ -11,7 +11,7 @@
 
 
 @section('content')
-    <form action="{{ route('Companyupdate',$company->uuid) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('companies.update',$company->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method("PUT")
         <div class="row ">
@@ -124,10 +124,10 @@
                                             <option value="">{{ trans('companyTrans.choose') }}</option>
                                             @foreach ($companyservicetype as $serviceType)
                                                 @if (App::islocale('ar'))
-                                                    <option @if  ($company->companyservicetype_id == $serviceType->uuid  )  selected @endif value="{{ $serviceType->uuid }}">{{ $serviceType->arname }}
+                                                    <option @if  ($company->companyservicetype_id == $serviceType->id  )  selected @endif value="{{ $serviceType->id }}">{{ $serviceType->arname }}
                                                     </option>
                                                 @else
-                                                    <option @if  ($company->companyservicetype_id == $serviceType->uuid  )  selected @endif value="{{ $serviceType->uuid }}">{{ $serviceType->name }}
+                                                    <option @if  ($company->companyservicetype_id == $serviceType->id  )  selected @endif value="{{ $serviceType->id }}">{{ $serviceType->name }}
                                                     </option>
                                                 @endif
                                             @endforeach
@@ -242,7 +242,7 @@
                             <button class="btn btn-success pull-right" role="submit">
                                 {{ trans('companyTrans.save') }}
                             </button>
-                            <a href="{{route("showCompaniesList")}}" class="btn btn-danger">
+                            <a href="{{route("companies.index")}}" class="btn btn-danger">
                                 {{ trans('companyTrans.cancel') }}
                             </a>
                         </div>

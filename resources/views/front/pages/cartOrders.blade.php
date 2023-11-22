@@ -95,9 +95,9 @@
                                                 <option  value="">{{ trans('frontHeader.ChooseArea') }}</option>
                                                 @foreach ($governs as $govern)
                                                     @if (APP::islocale('ar'))
-                                                        <option  value="{{ $govern->uuid }}">{{ $govern->arname }}</option>
+                                                        <option  value="{{ $govern->id }}">{{ $govern->arname }}</option>
                                                     @else
-                                                        <option  value="{{ $govern->uuid }}">{{ $govern->name }}</option>
+                                                        <option  value="{{ $govern->id }}">{{ $govern->name }}</option>
                                                     @endif
                                                 @endforeach
                                             </select>

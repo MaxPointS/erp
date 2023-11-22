@@ -12,11 +12,12 @@ class companyservicetype extends Model
 
     // protected $primaryKey = "uuid";
 
-    protected $primaryKey = "uuid";
+
 
     protected $keyType = 'string';
 
     public $incrementing = false;
+    
     public function companies():HasMany{
         return $this->hasMany(company::class);
     }

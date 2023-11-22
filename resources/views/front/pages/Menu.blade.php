@@ -38,9 +38,9 @@
                         <ul class="nav nav-menu bg-dark dark">
                             @foreach ($companiesWithServices as $service)
                                 @if (App::islocale('en'))
-                                    <li><a href="#menuservice{{ $service->uuid }}">{{ $service->name }}</a></li>
+                                    <li><a href="#menuservice{{ $service->id }}">{{ $service->name }}</a></li>
                                 @else
-                                    <li><a href="#menuservice{{ $service->uuid }}">{{ $service->arname }}</a></li>
+                                    <li><a href="#menuservice{{ $service->id }}">{{ $service->arname }}</a></li>
                                 @endif
                             @endforeach
 
@@ -64,9 +64,9 @@
 
                     <!---->
                     @foreach ($companiesWithServices as $company)
-                        <div id="menuservice{{ $company->uuid }}" class="menu-service">
+                        <div id="menuservice{{ $company->id }}" class="menu-service">
                             <div class="menu-service-title collapse-toggle" role="tab"
-                                data-target="#menu{{ $company->uuid }}Content" data-toggle="collapse" aria-expanded="true">
+                                data-target="#menu{{ $company->id }}Content" data-toggle="collapse" aria-expanded="true">
                                 <h4 class="title"><b style="color:#87226b">
 
                                         @if (App::islocale('en'))
@@ -76,7 +76,7 @@
                                         @endif
                                     </b></h4>
                             </div>
-                            <div id="menu{{ $company->uuid }}Content" class="menu-service-content padded collapse show">
+                            <div id="menu{{ $company->id }}Content" class="menu-service-content padded collapse show">
                                 <div class="row gutters-sm">
 
                                     @foreach ($company->services as $service)
@@ -85,15 +85,15 @@
                                             <!-- Menu Item `products`.`MenuSort` ASC -->
                                             <div class="menu-item menu-grid-item">
                                                 <img style="display:none;" class="mb-4 override-img"
-                                                    id="imgsrc{{ $service->uuid }}" imgs="{{ $service->Image }}"
-                                                    src="{{ asset('images') . '/' . $service->Image }}" width="60%"
+                                                    id="imgsrc{{ $service->id }}" imgs="{{ $service->image }}"
+                                                    src="{{ asset('images') . '/' . $service->image }}" width="60%"
                                                     alt="">
                                                 <img id="imageresource" class="mb-4 item-image"
                                                     data-itemName="  @if (App::islocale('en')) {{ $service->name }}  @else  {{ $service->arname }} @endif "
                                                     data-itemDesc="{{ $service->ardescription }}"
-                                                    src="{{ asset('images') . '/' . $service->Image }}" width="100%"
+                                                    src="{{ asset('images') . '/' . $service->image }}" width="100%"
                                                     alt="">
-                                                <h6 id="productname{{ $service->uuid }}" class="mb-1">
+                                                <h6 id="productname{{ $service->id }}" class="mb-1">
                                                     @if (App::islocale('en'))
                                                         {{ $service->name }}
                                                     @else
@@ -139,7 +139,7 @@
                             <button class="btn btn-outline-secondary btn-sm add-cart-modal" onclick="setModelData(this)"
                                 productName="@if (App::islocale('en')) {{ $service->name }}  @else  {{ $service->arname }} @endif"
                                 prodesc="@if (App::islocale('en')) {{ $service->description }}  @else  {{ $service->ardescription }} @endif"
-                                uuid="{{ $service->uuid }}" item_price="{{ $service->price }}"
+                                uuid="{{ $service->id }}" item_price="{{ $service->price }}"
                                 item_total_price="{{ $service->price }}" item_Qty="1" data-toggle="modal"
                                 data-target="#serviceModal"><span>{{ trans('frontHeader.addtocart') }}</span></button>
                         </div>
@@ -469,15 +469,15 @@
         // var slideIndex = 0;
         // window.onload = function() {
         //     //setTimeout();
-        //     setInterval(changeImage, 5000);
+        //     setInterval(changeimage, 5000);
 
         //     var imgs = document.getElementsByTagName("img");
         //     var slides = document.getElementsByClassName("mySlides");
-        //     // slides[0].style.backgroundImage  = "url('"+imgSrc()+"')";  
+        //     // slides[0].style.backgroundimage  = "url('"+imgSrc()+"')";  
 
-        //     function changeImage() {
+        //     function changeimage() {
         //         var i = Math.floor((Math.random() * 20));
-        //         slides[0].style.backgroundImage = "url('" + imgs[i].src + "')";
+        //         slides[0].style.backgroundimage = "url('" + imgs[i].src + "')";
 
         //     }
         // }

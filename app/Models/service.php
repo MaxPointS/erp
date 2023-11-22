@@ -27,14 +27,14 @@ class service extends Model
 //    ];
 
    protected $garded = [];
-    protected $primaryKey = "uuid";
+    // protected $primaryKey = "uuid";
 
     protected $keyType = 'string';
 
     public $incrementing = false;
 
     public function  company():BelongsTo{
-        return $this->belongsTo(company::class,"company_id","uuid");
+        return $this->belongsTo(company::class);
     }
 
     public function  cart():BelongsToMany{
@@ -42,7 +42,7 @@ class service extends Model
     }
 
     public function  terms():HasMany{
-        return $this->HasMany(term::class,"service_id","uuid");
+        return $this->HasMany(term::class);
     }
 
 public function orders():HasManyThrough{

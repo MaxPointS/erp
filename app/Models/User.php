@@ -28,7 +28,7 @@ class User extends Authenticatable
         'password',
     ];
 
-    protected $primaryKey= "uuid";
+    // protected $primaryKey= "uuid";
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -50,14 +50,14 @@ class User extends Authenticatable
     ];
 
     public function role():BelongsTo{
-        return $this->BelongsTo(role::class,"role_id","uuid");
+        return $this->BelongsTo(role::class);
     }
 
     // public function permissions():HasManyThrough{
     //     return $this->HasManyThrough(RolePermission::class,user::class,"role_id","user_id");
     // }
     public function permissions():BelongsToMany{
-        return $this->BelongsToMany(permission::class,RolePermission::class,"permission_id","uuid","role_id","uuid")
+        return $this->BelongsToMany(permission::class,RolePermission::class)//"permission_id","uuid","role_id","uuid"
         ->using(RolePermission::class)
         ->withTimestamps();
     }

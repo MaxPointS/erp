@@ -12,8 +12,9 @@ class govern extends Model
 
     // protected $primaryKey="uuid";
     // public $incrementing = false;
+    protected $keyType = 'string';
 
     public function govern_areas():HasMany{
-        return $this->hasMany(governArea::class,"govern_id","uuid");
+        return $this->hasMany(governArea::class);
     }
 }

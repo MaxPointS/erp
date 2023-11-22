@@ -14,7 +14,7 @@ class role extends Model
 
 
     public function users():HasMany{
-        return $this-> hasMany(User::class,"uuid","role_id");
+        return $this-> hasMany(User::class);
     }
 
     public function permissions():HasMany{
